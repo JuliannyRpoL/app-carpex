@@ -7,5 +7,6 @@
   }"
   [ngStyle]="style"
 >
+  <mat-spinner *ngIf="charging === true" color="accent" diameter="20" mode="indeterminate"></mat-spinner>
   {{ label }}
 </button>

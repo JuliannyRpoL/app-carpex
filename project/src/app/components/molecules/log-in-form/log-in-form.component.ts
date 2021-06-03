@@ -13,12 +13,14 @@ export class LogInFormComponent {
   _password: string;
   emailError: string;
   passwordError: string;
+  charging: boolean;
 
   constructor(public _authService: AuthenticationService) {
     this.user = '';
     this._password = '';
     this.emailError = '';
     this.passwordError = '';
+    this.charging = false;
   }
 
   getUserValue(user: string) {
@@ -30,6 +32,8 @@ export class LogInFormComponent {
   }
 
   async handleLogin() {
+    this.charging = true;
+
     const isAValidEmail = isValidEmail(this.user);
 
     this.emailError = '';
@@ -58,5 +62,7 @@ export class LogInFormComponent {
         this.emailError = 'Ingrese un email válido';
       }
     }
+
+    this.charging = false
   }
 }

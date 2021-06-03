@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-common-button',
@@ -6,6 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./common-button.component.scss'],
 })
 export class CommonButtonComponent {
+  @Input() charging: boolean = false;
   @Input() label: string = '';
   @Input() variant: string = 'content';
   @Input() style: any = '';

@@ -1,3 +1,3 @@
 export const HOME = '';
 export const LOGIN = 'login';
-export const SIGNIN = 'registro';
+export const SIGNIN = 'singup';

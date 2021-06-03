@@ -29,9 +29,10 @@ import { FileComponent } from './components/atoms/file/file.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { PageNotFoundOrgComponent } from './components/organisms/page-not-found-org/page-not-found-org.component';
 import { AuthorizationComponent } from './components/templates/authorization/authorization.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from "@angular/material/icon";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,7 @@ import { MatIconModule } from "@angular/material/icon";
     PageNotFoundOrgComponent,
     AuthorizationComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NoopAnimationsModule, MatMenuModule, MatIconModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, MatMenuModule, MatIconModule, MatProgressSpinnerModule],
   providers: [],
   bootstrap: [AppComponent],
 })

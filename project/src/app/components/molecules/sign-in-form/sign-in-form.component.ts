@@ -8,6 +8,8 @@ import { isValidEmail, isValidPassword } from 'src/utils/validationForm';
   styleUrls: ['./sign-in-form.component.scss'],
 })
 export class SignInFormComponent {
+  charging: boolean;
+
   user: string;
   password: string;
   id: string;
@@ -21,6 +23,7 @@ export class SignInFormComponent {
   addressError: string;
 
   constructor(public _authenticationService: AuthenticationService) {
+    this.charging = false;
     this.user = '';
     this.password = '';
     this.id = ""
@@ -102,6 +105,8 @@ export class SignInFormComponent {
   }
 
   handleSignIn() {
+    this.charging = true;
+
     const isAValidEmail = isValidEmail(this.user);
     const isAValidPassword = isValidPassword(this.password);
 
@@ -127,5 +132,7 @@ export class SignInFormComponent {
         this.addressError = 'Ingrese dirección de residencia';
       }
     }
+
+    this.charging = false;
   }
 }
