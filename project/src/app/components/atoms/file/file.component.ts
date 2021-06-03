@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PlaylistService } from 'src/services/playlist.service';
 
 @Component({
   selector: 'a-file',
@@ -11,7 +10,7 @@ export class FileComponent {
   @Input() name: string = '';
   @Input() type: string = '';
 
-  constructor(public _playlistService: PlaylistService) {}
+  constructor() {}
 
   async openFile(url: string) {
     window.open(url)

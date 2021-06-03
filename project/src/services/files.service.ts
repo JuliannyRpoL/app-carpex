@@ -16,7 +16,7 @@ export class FilesService {
       ? (user_id = JSON.parse(user_data).cc)
       : (user_id = '');
 
-    const url = `/upload/${user_id}`;
+    const url = `/files/upload/${user_id}`;
     let formData = new FormData()
     formData.append("file", file);
 
@@ -39,7 +39,7 @@ export class FilesService {
       ? (user_id = JSON.parse(user_data).cc)
       : (user_id = '');
 
-    const url = `/listFiles/${user_id}`;
+    const url = `/files/list-files/${user_id}`;
 
     return (await axiosInterceptor.get(url)).data;
   }
@@ -53,7 +53,7 @@ export class FilesService {
       ? (user_id = JSON.parse(user_data).cc)
       : (user_id = '');
 
-    const url = `/openRecently/${user_id}`;
+    const url = `/files/open-recently/${user_id}`;
 
     return (await axiosInterceptor.get(url)).data;
   }
@@ -67,7 +67,7 @@ export class FilesService {
       ? (user_id = JSON.parse(user_data).cc)
       : (user_id = '');
 
-    const url = `/autenticated/${user_id}`;
+    const url = `/files/authenticated/${user_id}`;
 
     return (await axiosInterceptor.get(url)).data;
   }
@@ -81,7 +81,7 @@ export class FilesService {
       ? (user_id = JSON.parse(user_data).cc)
       : (user_id = '');
 
-    const url = `/autenticate-file/${user_id}`;
+    const url = `/files/authenticate-file/${user_id}`;
 
     return (await axiosInterceptor.put(url, data)).data;
   }
@@ -95,7 +95,7 @@ export class FilesService {
       ? (user_id = JSON.parse(user_data).cc)
       : (user_id = '');
 
-    const url = `https://govcarpetaapp.mybluemix.net​/apis​/authenticateDocument​/${user_id}​/${urlFile}​/${name}`;
+    const url = `​/authenticateDocument​/${user_id}​/${urlFile}​/${name}`;
 
     return (await axiosInterceptor.get(url)).data;
   }
@@ -109,7 +109,7 @@ export class FilesService {
       ? (user_id = JSON.parse(user_data).cc)
       : (user_id = '');
 
-    const url = `/update-date/${user_id}`;
+    const url = `/files/update-date/${user_id}`;
 
     return (await axiosInterceptor.put(url, data)).data;
   }
