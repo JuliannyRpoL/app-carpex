@@ -1,7 +1,10 @@
 <div class="o-files-list">
   <div class="o-files-list-btn">
     <input class="o-files-list-btn__btn" type="file" name="upload" id="upload" (change)="handleFileInput($event.target.files)">
-    <label class="o-files-list-btn__label" for="upload">Subir archivo</label>
+    <label class="o-files-list-btn__label" for="upload">
+      <mat-spinner *ngIf="charging === true" color="accent" diameter="20" mode="indeterminate"></mat-spinner>
+      Subir archivo
+    </label>
   </div>
   <div class="o-files-list-files-group" role="files open recently">
     <m-files-group

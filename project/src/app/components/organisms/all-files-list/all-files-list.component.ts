@@ -7,14 +7,17 @@ import { FilesService } from 'src/services/files.service';
   styleUrls: ['./all-files-list.component.scss'],
 })
 export class AllFilesListComponent implements OnInit {
+  charging: boolean = false;
   files: any;
   openRecently: any;
 
   constructor(public _filesService: FilesService) {}
 
-  handleFileInput(file: any) {
-    console.log(file)
-    this._filesService.uploadFile(file[0])
+  async handleFileInput(file: any) {
+    this.charging = true;
+    await this._filesService.uploadFile(file[0])
+    await this.getFiles()
+    this.charging = false;
   }
 
   async getFiles() {

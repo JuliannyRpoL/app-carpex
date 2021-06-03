@@ -56,5 +56,9 @@
   .mat-menu-trigger {
     background-color: transparent;
     border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
