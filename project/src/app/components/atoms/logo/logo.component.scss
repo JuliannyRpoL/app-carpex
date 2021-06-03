@@ -1,0 +1,34 @@
+@import "../../../../styles.scss";
+
+.a-logo-img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__img {
+    width: 80px;
+  }
+
+  &__name {
+    margin-top: 15px;
+    color: $font-grey;
+    font-size: 32px;
+
+    @include montserrat-bold;
+  }
+}
+
+.a-logo-img-div--horz {
+  flex-direction: row;
+
+  .a-logo-img-div__img {
+    width: 40px;
+  }
+
+  .a-logo-img-div__name {
+    margin-left: 10px;
+    display: block;
+    font-size: 22px;
+  }
+}

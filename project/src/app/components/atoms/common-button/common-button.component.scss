@@ -1,0 +1,34 @@
+@import "../../../../styles.scss";
+
+.button {
+  color: $font-light;
+  border: none;
+  height: 1.5em;
+  cursor: pointer;
+  box-sizing: unset;
+  outline: none;
+}
+
+.button--none {
+  @include montserrat-semi-bold;
+  color: $font-dark;
+  background-color: transparent;
+}
+
+.button--content {
+  background-color: $primary;
+  border-radius: 1.5em;
+
+  &:hover {
+    background-color: $primary-dark;
+  }
+}
+
+.button--outlined {
+  border: 1px $border solid;
+  border-radius: 0.5em;
+
+  &:hover {
+    background-color: $hover-white;
+  }
+}

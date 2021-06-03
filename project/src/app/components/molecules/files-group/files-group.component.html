@@ -1,0 +1,17 @@
+<div class="m-files-group">
+  <h2>{{ title }}</h2>
+  <div
+    class="m-files-group__files"
+    [ngClass]="{
+      'm-files-group__files--wrap': variant == 'wrap',
+      'm-files-group__files--no-wrap': variant == 'no-wrap'
+    }"
+  >
+    <div class="m-file" *ngFor="let file of files">
+      <a-file
+        [name]="file.name"
+        [imgSrc]="file.url"
+      ></a-file>
+    </div>
+  </div>
+</div>

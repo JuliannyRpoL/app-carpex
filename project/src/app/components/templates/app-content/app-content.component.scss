@@ -1,0 +1,63 @@
+@import "../../../../styles.scss";
+
+.t-app-content {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
+  background-color: $background;
+
+  .t-app-content__content {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+
+    @include from($medium) {
+      position: static;
+      width: calc(100% - 230px);
+    }
+
+    &__navigation-bar {
+      width: 100%;
+      height: 60px;
+    }
+
+    &__songs-content {
+      width: 100%;
+      min-height: calc(100vh - 60px);
+    }
+  }
+
+  &__menu {
+    display: none;
+    width: 85%;
+    position: absolute;
+    height: auto;
+
+    @include from($medium) {
+      display: block;
+      min-width: 230px;
+      max-width: 230px;
+      position: static;
+    }
+  }
+
+  &__menu--show {
+    z-index: 1;
+    display: block;
+    height: 100vh;
+  }
+
+  .t-app-content__layer {
+    width: 100%;
+    display: none;
+    height: 100vh;
+    position: absolute;
+  }
+
+  .t-app-content__layer--show {
+    display: block;
+    background-color: $hover-dark-up;
+  }
+}

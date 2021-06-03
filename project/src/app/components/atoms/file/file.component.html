@@ -1,0 +1,21 @@
+<div class="a-file">
+  <div class="a-file__img">
+    <img src="{{ imgSrc }}" alt="imagen de playlist" />
+  </div>
+  <div class="a-file__info">
+    <h5>{{ name }}</h5>
+    <div class="a-file__icon">
+      <a-icon-button
+        [variant]="'without-label'"
+        [imgSrc]="'../../../../assets/img/ellipsis-v-solid-svg.png'"
+        [style]="{
+          'font-size': '8px',
+          width: '5px',
+          'border-radius': '2em'
+        }"
+        (click)="openFile(imgSrc)"
+      ></a-icon-button>
+    </div>
+  </div>
+
+</div>

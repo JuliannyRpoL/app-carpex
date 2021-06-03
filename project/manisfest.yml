@@ -1,0 +1,5 @@
+---
+applications:
+ - name: carpex-app
+   random-route: true
+   memory: 128M

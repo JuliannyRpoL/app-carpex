@@ -1,0 +1,40 @@
+@import "../../../../styles.scss";
+
+.o-navigation-bar {
+  height: 100%;
+  background-color: $background;
+  border-bottom: 1px $border-light solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+
+  &-logo {
+    display: none;
+  }
+
+  &-search {
+    width: 55%;
+  }
+
+  &-profile {
+    margin-right: 10px;
+  }
+
+  @include from($medium) {
+    justify-content: flex-start;
+
+    &-menu-btn {
+      display: none;
+    }
+
+    &-search {
+      width: 60%;
+    }
+
+    &-profile {
+      margin-right: 20px;
+      margin-left: auto;
+    }
+  }
+}

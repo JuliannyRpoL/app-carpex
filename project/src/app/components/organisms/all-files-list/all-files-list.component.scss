@@ -1,0 +1,35 @@
+@import "../../../../styles.scss";
+
+.o-files-list {
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+
+  &-files-group {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  &-btn {
+    margin-top: 30px;
+
+    input[type="file"] {
+      display: none;
+    }
+
+     label[for="upload"] {
+      font-size: 14px;
+      font-weight: 400;
+      color: $primary-dark;
+      display: inline-block;
+      transition: all .5s;
+      cursor: pointer;
+      padding: 8px 40px !important;
+      width: fit-content;
+      text-align: center;
+      border: 1px $primary-dark solid;
+      border-radius: 0.5em;
+    }
+  }
+}
