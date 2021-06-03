@@ -4,18 +4,19 @@
   </div>
   <div class="a-file__info">
     <h5>{{ name }}</h5>
-    <div class="a-file__icon">
-      <a-icon-button
-        [variant]="'without-label'"
-        [imgSrc]="'../../../../assets/img/ellipsis-v-solid-svg.png'"
-        [style]="{
-          'font-size': '8px',
-          width: '5px',
-          'border-radius': '2em'
-        }"
-        (click)="openFile(imgSrc)"
-      ></a-icon-button>
-    </div>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="openFile(imgSrc, name)">
+        <mat-icon>open_in_new</mat-icon>
+        <span>Ver archivo</span>
+      </button>
+      <button mat-menu-item (click)="authenticateFile(name, imgSrc)">
+        <mat-icon>verified_user</mat-icon>
+        <span>Autenticar</span>
+      </button>
+    </mat-menu>
   </div>
 
 </div>

@@ -95,7 +95,7 @@ export class FilesService {
       ? (user_id = JSON.parse(user_data).cc)
       : (user_id = '');
 
-    const url = `​/authenticateDocument​/${user_id}​/${urlFile}​/${name}`;
+    const url = `/central/authenticateDocument​/${user_id}​/${urlFile}​/${name}`;
 
     return (await axiosInterceptor.get(url)).data;
   }

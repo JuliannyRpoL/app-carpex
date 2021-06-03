@@ -38,16 +38,8 @@ export class LogInFormComponent {
     if (isAValidEmail && this._password) {
       try {
         const responseApi =  await this._authService.login({email: this.user, password: this._password});
-        let userData = {
-          "cc": "1000406959",
-          "name": "Julianny Restrepo",
-          "address": "Medellín",
-          "email": "juli@gmail.com"
-        }
-        localStorage.setItem("user_data", JSON.stringify(userData))
+        localStorage.setItem("user_data", JSON.stringify(responseApi))
         window.location.href = HOME
-
-        //this._authService.redirectLogin();
       } catch (error) {
         if (
           error.code === 'auth/wrong-password' ||
