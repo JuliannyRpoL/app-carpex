@@ -10,8 +10,12 @@ export class FileComponent {
   @Input() imgSrc: string = '';
   @Input() name: string = '';
   @Input() type: string = '';
+  @Input() url: string = '';
+  @Input() authenticated: boolean = false;
 
   constructor(public _filesService: FilesService) {}
+
+
 
   async openFile(url: string, name: string) {
     await this._filesService.updateOpen({name})

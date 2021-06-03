@@ -2,6 +2,7 @@ import {
   Component,
   Input,
 } from '@angular/core';
+import { getImage } from 'src/utils/mappingImg';
 
 @Component({
   selector: 'm-files-group',
@@ -14,4 +15,9 @@ export class FilesGroupComponent {
   @Input() files: any = '';
 
   constructor() {}
+
+  getImageMap(image, type){
+    const img = getImage(type, image)
+    return img;
+  }
 }

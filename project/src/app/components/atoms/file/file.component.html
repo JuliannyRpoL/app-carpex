@@ -8,11 +8,11 @@
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="openFile(imgSrc, name)">
+      <button mat-menu-item (click)="openFile(url, name)">
         <mat-icon>open_in_new</mat-icon>
         <span>Ver archivo</span>
       </button>
-      <button mat-menu-item (click)="authenticateFile(name, imgSrc)">
+      <button *ngIf="authenticated === false" mat-menu-item (click)="authenticateFile(name, url)">
         <mat-icon>verified_user</mat-icon>
         <span>Autenticar</span>
       </button>

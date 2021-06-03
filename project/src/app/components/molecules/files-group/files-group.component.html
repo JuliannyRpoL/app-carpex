@@ -10,7 +10,10 @@
     <div class="m-file" *ngFor="let file of files">
       <a-file
         [name]="file.name"
-        [imgSrc]="file.url"
+        [imgSrc]="getImageMap(file.url, file.type)"
+        [url]="file.url"
+        [type]="file.type"
+        [authenticated]="file.autenticated"
       ></a-file>
     </div>
   </div>
