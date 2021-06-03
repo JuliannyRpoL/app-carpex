@@ -13,9 +13,10 @@ export class FileComponent {
 
   constructor(public _filesService: FilesService) {}
 
-  openFile(url: string, name: string) {
-    this._filesService.updateOpen({name})
+  async openFile(url: string, name: string) {
+    await this._filesService.updateOpen({name})
     window.open(url)
+    window.location.reload()
   }
 
   async authenticateFile(name: string, url: string){
