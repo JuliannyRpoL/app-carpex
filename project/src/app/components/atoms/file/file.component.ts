@@ -24,15 +24,13 @@ export class FileComponent {
   }
 
   async authenticateFile(name: string, url: string){
-    url = url.replace(":", "%3A")
-    url = url.replace("%2F", "%252")
-    url = url.replace("/", "%2F")
-    url = url.replace("?", "%3F")
-    url = url.replace("=", "%3D")
+    url = encodeURIComponent(url)
+    console.log(url)
 
     try{
-      const response = await this._filesService.getAutentication(url, name)
-      console.log(response)
+      await this._filesService.getAutentication(url, name)
+      await this._filesService.autenticateFile({name})
+      window.location.reload()
     }
     catch(error){
       console.log(error)
