@@ -17,10 +17,6 @@ export class AuthenticationService {
     const url = `/central/registerCitizen`
     const headers = {
       'Content-Type': "application/json",
-      'Access-Control-Allow-Origin':'*',
-      'Access-Control-Allow-Methods': 'GET',
-      'Access-Control-Allow-Headers':'*',
-      'cache-control': 'no-cache'
     }
     data = JSON.stringify(data)
 

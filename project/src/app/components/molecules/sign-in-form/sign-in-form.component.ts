@@ -81,21 +81,23 @@ export class SignInFormComponent {
             "operatorId": 30,
             "operatorName": "Carpex"
           }
-          const responseApi = await this._authenticationService.singup({
+          await this._authenticationService.singup({
             "cc": this.id,
             "name": this.name,
             "address": this.address,
             "email": this.user,
             "password": this.password
           });
-          const responseCentral = await this._authenticationService.registerUserInCentral(data)
+          await this._authenticationService.registerUserInCentral(data)
+          window.location.href = "/login"
 
-          console.log(responseCentral, responseApi)
-
-          // this._authenticationService.redirectLogin();
         } catch (error) {
-          if (error.code === 'auth/email-already-in-use') {
-            this.passwordError = 'Este email ya está en uso';
+          error = error.response.data
+          if(error.password){
+            this.passwordError = error.password;
+          }
+          if(error.email){
+            this.emailError = "Email ya registrado";
           }
         }
       }

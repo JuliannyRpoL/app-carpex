@@ -45,13 +45,12 @@ export class LogInFormComponent {
         localStorage.setItem("user_data", JSON.stringify(responseApi))
         window.location.href = HOME
       } catch (error) {
-        if (
-          error.code === 'auth/wrong-password' ||
-          error.code === 'auth/user-not-found'
-        ) {
-          this.passwordError = 'Credenciales incorrectas';
-        } else {
-          console.log(error);
+        error = error.response.data
+        if(error.password){
+          this.passwordError = error.password;
+        }
+        if(error.email){
+          this.emailError = error.email;
         }
       }
     } else {
