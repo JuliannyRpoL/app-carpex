@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FilesService } from 'src/services/files.service';
 
 @Component({
@@ -7,10 +7,7 @@ import { FilesService } from 'src/services/files.service';
   styleUrls: ['./all-files-list.component.scss'],
 })
 export class AllFilesListComponent implements OnInit {
-  authenticatedFiles: any;
   charging: boolean = false;
-  files: any;
-  openRecently: any;
 
   constructor(public _filesService: FilesService) {}
 
@@ -18,8 +15,7 @@ export class AllFilesListComponent implements OnInit {
     this.charging = true;
 
     try {
-      await this._filesService.uploadFile(file[0])
-      await this.getFiles()
+      await this._filesService.uploadFile(file[0]);
     }catch(error) {
       console.log(error)
     }
@@ -27,18 +23,5 @@ export class AllFilesListComponent implements OnInit {
     this.charging = false;
   }
 
-  async getFiles() {
-    try {
-      this.openRecently = await this._filesService.getOpenRecently();
-      this.authenticatedFiles = await this._filesService.getFilesAutenticated();
-      this.files = await this._filesService.getAllFiles();
-      console.log(this.openRecently)
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  ngOnInit(): void {
-    this.getFiles();
-  }
+  ngOnInit(): void {}
 }
