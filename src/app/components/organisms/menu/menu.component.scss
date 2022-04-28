@@ -11,15 +11,17 @@
     height: 60px;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 10px;
     padding-left: 25px;
     max-width: calc(100% - 25px);
     width: 100%;
     border-bottom: 1px $border-light solid;
-
   }
 
   &-nav-items {
+    height: calc(100% - 80px);
     min-width: 100%;
+    border-right: 1px $border-light solid;
   }
 }
+
+

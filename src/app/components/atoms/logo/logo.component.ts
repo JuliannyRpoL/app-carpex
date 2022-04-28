@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./logo.component.scss'],
 })
 export class LogoComponent {
-  applicattionName: string = 'Carpex';
+  applicattionName: string = 'EverGreen';
 
   @Input() orientation: string = '';
 }
