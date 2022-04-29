@@ -5,4 +5,4 @@ RUN npm ci && npm run build
 
 FROM nginx:alpine
 COPY --from=my-app-build /app/dist/project /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 3000
