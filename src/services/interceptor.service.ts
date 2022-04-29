@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { environment } from 'src/environments/environment';
 
 const axiosInterceptor = axios.create({
-  baseURL: 'https://1sej58tw6k.execute-api.us-east-1.amazonaws.com/apis',
+  baseURL: environment.BACKEND_URL,
 });
 
 export default axiosInterceptor;
