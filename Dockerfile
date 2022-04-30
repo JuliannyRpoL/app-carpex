@@ -1,8 +1,10 @@
-FROM node:alpine AS my-app-build
+FROM node:14.17.3-alpine3.14 AS my-app-build
 WORKDIR /app
 COPY . .
 RUN npm ci && npm run build
 
 FROM nginx:alpine
-COPY --from=my-app-build /app/dist/app-to-run-inside-docker /usr/share/nginx/html
+COPY --from=my-app-build /app/dist/project /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'
 EXPOSE 80
