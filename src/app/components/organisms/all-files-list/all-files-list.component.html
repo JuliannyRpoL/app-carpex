@@ -1,10 +1,16 @@
 <div class="o-files-list">
   <h2>Analítica</h2>
-  <div class="o-files-list-btn">
-    <input class="o-files-list-btn__btn" type="file" name="upload" id="upload" (change)="handleFileInput($event.target.files)">
-    <label class="o-files-list-btn__label" for="upload">
-      <mat-spinner *ngIf="charging === true" color="accent" diameter="20" mode="indeterminate"></mat-spinner>
-      Subir archivo
-    </label>
-  </div>
+  <div class="o-files-list__upload">
+    <figure class="o-files-list__upload__img">
+      <img alt="subir archivo" src="../../../../assets/img/upload-file.png">
+    </figure>
+    <p>Sube un archivo para guardar en base de datos</p>
+    <div class="o-files-list__upload__btn">
+      <input class="o-files-list__upload__btn__input" type="file" name="upload" id="upload" (change)="handleFileInput($event.target.files)">
+      <label class="o-files-list__upload__btn__label" for="upload">
+        <mat-spinner *ngIf="charging === true" color="accent" diameter="20" mode="indeterminate"></mat-spinner>
+        Subir archivo
+      </label>
+    </div>
+  </div>  
 </div>

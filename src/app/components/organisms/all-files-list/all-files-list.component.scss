@@ -11,40 +11,62 @@
     color: $primary-dark;
   }
 
-  &-btn {
-    width: 200px;
+  &__upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    margin: 50px auto;
+    padding: 50px 0px;
+    box-shadow: 0 4px 10px 6px rgba(200, 200, 200, 0.6);
 
-    input[type="file"] {
-      display: none;
+    &__img {
+      width: 60px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
-    .o-files-list-btn__label {
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
+    p {
+      margin-bottom: 30px;
+    }
 
-      ::ng-deep
-        .mat-progress-spinner,
-        .mat-spinner {
-          margin-right: 8px;
-            circle {
-              stroke: $primary-dark;
-            }
+    &__btn {
+      width: 230px;
+
+      input[type="file"] {
+        display: none;
+      }
+
+      &__label {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+
+        ::ng-deep
+          .mat-progress-spinner,
+          .mat-spinner {
+            margin-right: 8px;
+              circle {
+                stroke: $primary-dark;
+              }
+          }
+      }
+
+      label[for="upload"] {
+          font-size: 14px;
+          font-weight: 400;
+          color: $primary-dark;
+          display: inline-block;
+          transition: all .5s;
+          cursor: pointer;
+          padding: 8px 20px;
+          text-align: center;
+          border: 1px $primary-dark solid;
+          border-radius: 0.5em;
         }
     }
-
-     label[for="upload"] {
-      font-size: 14px;
-      font-weight: 400;
-      color: $primary-dark;
-      display: inline-block;
-      transition: all .5s;
-      cursor: pointer;
-      width: 100%;
-      padding: 8px 20px !important;
-      text-align: center;
-      border: 1px $primary-dark solid;
-      border-radius: 0.5em;
-    }
-  }
+  }    
 }
