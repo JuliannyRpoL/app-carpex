@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: jalopezb/only-files:latest
+          image: jalopezb/kubernetes-app:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 80
