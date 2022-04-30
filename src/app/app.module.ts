@@ -16,8 +16,6 @@ import { IconInputComponent } from './components/atoms/icon-input/icon-input.com
 import { ProfileComponent } from './components/molecules/profile/profile.component';
 import { AppContentComponent } from './components/templates/app-content/app-content.component';
 import { NavItemsComponent } from './components/molecules/nav-items/nav-items.component';
-import { FilesGroupComponent } from './components/molecules/files-group/files-group.component';
-import { FileComponent } from './components/atoms/file/file.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatMenuModule } from '@angular/material/menu';
@@ -39,8 +37,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     IconInputComponent,
     ProfileComponent,
     NavItemsComponent,
-    FilesGroupComponent,
-    FileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NoopAnimationsModule, MatMenuModule, MatIconModule, MatProgressSpinnerModule],
   providers: [],
