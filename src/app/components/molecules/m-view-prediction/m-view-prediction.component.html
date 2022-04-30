@@ -1,15 +1,15 @@
 <section class="m-view-prediction">
     <div class="m-view-prediction__extra-info">
         <div class="m-view-prediction__extra-info__locate">
-            <h4>{{prediction.country}}</h4>
-            <h5>{{prediction.city}}</h5>
+            <h4>{{prediction.pais}}</h4>
+            <h5>{{prediction.ciudad}}</h5>
+            <p>Clima: {{prediction.descripcion}}</p>
         </div>
         <div class="m-view-prediction__extra-info__temp">
             <span>{{prediction.temp}}°</span>
         </div>
-    </div>
-    <div class="m-view-prediction__description">
-        <p>{{prediction.description}}</p>
-        <figure></figure>
+        <figure class="m-view-prediction__extra-info__img">
+            <img alt="temperatura" [src]="prediction.img">
+        </figure>
     </div>
 </section>

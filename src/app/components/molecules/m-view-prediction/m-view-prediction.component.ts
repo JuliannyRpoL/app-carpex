@@ -8,11 +8,14 @@ import { Prediction } from 'src/app/models/prediction';
 })
 export class MViewPredictionComponent implements OnInit {
   @Input() prediction: Prediction = {
-    country: '',
-    city: '',
+    pais: '',
+    ciudad: '',
     temp: '',
-    description: ''
+    descripcion: '',
+    img: ''
   };
+
+  img: string = "";
 
   constructor() { }
 

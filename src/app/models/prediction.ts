@@ -1,6 +1,7 @@
 export interface Prediction {
-    country: string,
-    city: string,
+    pais: string,
+    ciudad: string,
     temp: string,
-    description: string
+    descripcion: string,
+    img: string
 }

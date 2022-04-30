@@ -7,20 +7,30 @@ import axiosInterceptor from './interceptor.service';
   providedIn: 'root',
 })
 export class PredictionService {
-  prediction = {
-    country: "Colombia",
-    city: "Medellin",
-    temp: "22",
-    description: "Parcialmente nublado"
-  };
+  prediction = "";
 
   async getWeatherPrediction(lat: string, lon: string) {
-    const url = `/`;
+    const url = `/getPrediction?lat=${lat}&lon=${lon}`;
 
     this.prediction = (await axiosInterceptor({
-      method: 'post',
+      method: 'get',
       url,
     })).data;
+
+    switch (true) {
+      case this.prediction['temp'] < '10':
+        this.prediction['img'] = "../../../../assets/img/copo.png"
+        break;
+      case this.prediction['temp'] < '20':
+        this.prediction['img'] = "../../../../assets/img/viento.png"
+        break;
+      case this.prediction['temp'] < '30':
+        this.prediction['img'] = "../../../../assets/img/playa.png"
+        break;
+      default:
+        this.prediction['img'] = "../../../../assets/img/fuego.png"
+        break;
+    }
   }
 
   async getAllFiles() {
