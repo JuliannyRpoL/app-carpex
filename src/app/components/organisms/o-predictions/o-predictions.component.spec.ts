@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FileComponent } from './file.component';
+import { OPredictionsComponent } from './o-predictions.component';
 
-describe('SongComponent', () => {
-  let component: FileComponent;
-  let fixture: ComponentFixture<FileComponent>;
+describe('OPredictionsComponent', () => {
+  let component: OPredictionsComponent;
+  let fixture: ComponentFixture<OPredictionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FileComponent ]
+      declarations: [ OPredictionsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FileComponent);
+    fixture = TestBed.createComponent(OPredictionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

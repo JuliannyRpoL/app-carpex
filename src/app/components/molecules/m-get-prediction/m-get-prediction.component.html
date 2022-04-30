@@ -1,0 +1,32 @@
+<section class="m-get-prediction">
+    <div class="m-get-prediction__input">
+        <app-common-input
+            (actualValue)="setValues($event, 'lat')"
+            [style]="{
+            width: '100%',
+            height: '35px'
+            }"
+            [placeholder]="'Latitud'"
+        ></app-common-input>
+    </div>
+    <div class="m-get-prediction__input">
+        <app-common-input
+            class="m-get-prediction__input"
+            (actualValue)="setValues($event, 'lon')"
+            [style]="{
+                width: '100%',
+                height: '35px'
+            }"
+            [placeholder]="'Longitud'"
+        ></app-common-input>
+    </div>
+    <div class="m-get-prediction__btn">
+        <app-common-button
+            label="Predecir"
+            [style]="{
+                width: '100%',
+                height: '35px'
+            }"
+        ></app-common-button>
+    </div>  
+</section>

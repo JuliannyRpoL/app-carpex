@@ -23,7 +23,11 @@
       height: 60px;
     }
 
-    &__songs-content {
+    &__information {
+      background-image: url("../../../../../src/assets/img/clima.JPG");
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      background-size: 40%;
       width: 100%;
       min-height: calc(100vh - 60px);
     }
