@@ -10,6 +10,6 @@ export class FilesService {
   async getAllFiles() {
     const url = `/getFiles`;
 
-    return (await axiosInterceptor.get(url)).data;
+    return (await axiosInterceptor.get(url)).data.data;
   }
 }
