@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilesGroupComponent } from './files-group.component';
+import { MViewPredictionComponent } from './m-view-prediction.component';
 
-describe('FilesGroupComponent', () => {
-  let component: FilesGroupComponent;
-  let fixture: ComponentFixture<FilesGroupComponent>;
+describe('MViewPredictionComponent', () => {
+  let component: MViewPredictionComponent;
+  let fixture: ComponentFixture<MViewPredictionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FilesGroupComponent ]
+      declarations: [ MViewPredictionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilesGroupComponent);
+    fixture = TestBed.createComponent(MViewPredictionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

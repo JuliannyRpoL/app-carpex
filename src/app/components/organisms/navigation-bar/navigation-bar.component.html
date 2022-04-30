@@ -11,16 +11,6 @@
       (click)="handleStatusMenuEvent()"
     ></a-icon-button>
   </div>
-  <div class="o-navigation-bar-search">
-    <app-common-input
-      (actualValue)="setSearchedFile($event)"
-      [style]="{
-        width: '100%',
-        height: '35px'
-      }"
-      [placeholder]="'Buscar archivos'"
-    ></app-common-input>
-  </div>
   <div class="o-navigation-bar-profile">
     <m-profile [imgSrc]="'../../../../assets/img/foto.png'"></m-profile>
   </div>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AllFilesListComponent } from './all-files-list.component';
+import { MGetPredictionComponent } from './m-get-prediction.component';
 
-describe('AllFilesListComponent', () => {
-  let component: AllFilesListComponent;
-  let fixture: ComponentFixture<AllFilesListComponent>;
+describe('MGetPredictionComponent', () => {
+  let component: MGetPredictionComponent;
+  let fixture: ComponentFixture<MGetPredictionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AllFilesListComponent ]
+      declarations: [ MGetPredictionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AllFilesListComponent);
+    fixture = TestBed.createComponent(MGetPredictionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

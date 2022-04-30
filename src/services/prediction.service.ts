@@ -6,27 +6,20 @@ import axiosInterceptor from './interceptor.service';
 @Injectable({
   providedIn: 'root',
 })
-export class FilesService {
-  async uploadFile(file) {
-    const user_data = localStorage.getItem('user_data');
+export class PredictionService {
+  prediction = {
+    country: "Colombia",
+    city: "Medellin",
+    temp: "22",
+    description: "Parcialmente nublado"
+  };
 
-    let user_id: string;
+  async getWeatherPrediction(lat: string, lon: string) {
+    const url = `/`;
 
-    user_data != undefined
-      ? (user_id = JSON.parse(user_data).cc)
-      : (user_id = '');
-
-    const url = `/files/upload/${user_id}`;
-    let formData = new FormData()
-    formData.append("file", file);
-
-    return (await axiosInterceptor({
+    this.prediction = (await axiosInterceptor({
       method: 'post',
       url,
-      headers: {
-        "Content-Type": "multipart/form-data"
-      },
-      data : formData
     })).data;
   }
 

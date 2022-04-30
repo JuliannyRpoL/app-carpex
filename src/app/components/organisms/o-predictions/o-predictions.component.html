@@ -1,0 +1,12 @@
+<div class="o-predictions">
+    <h2>Analítica</h2>
+    <p>Predecir clima</p>
+    <div class="o-predictions" role="predictions">
+        <app-m-get-prediction></app-m-get-prediction>
+        <app-m-view-prediction 
+            class="o-predictions__view-prediction"
+            *ngIf="_predictionService.prediction"
+            [prediction]="_predictionService.prediction"
+        ></app-m-view-prediction>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.m-get-prediction {
+    display: flex;
+    flex-direction: row;
+
+    &__input {
+        width: 150px;
+        margin-right: 32px;
+    }
+
+    &__btn {
+        width: 100px;
+    }
+}
