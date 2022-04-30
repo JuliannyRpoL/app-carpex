@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  BACKEND_URL: 'https://1sej58tw6k.execute-api.us-east-1.amazonaws.com/apis'
+  BACKEND_URL: 'https://backend-arquitecturas-avanzada.herokuapp.com'
 };
 
 /*

@@ -20,7 +20,7 @@ export class AllFilesListComponent implements OnInit {
 
   async getFiles() {
     try {
-      //this.files = await this._filesService.getAllFiles();
+      this.files = await this._filesService.getAllFiles();
     } catch (error) {
       console.log(error);
     }

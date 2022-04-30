@@ -14,26 +14,9 @@ export class FileComponent {
   @Input() authenticated: boolean = false;
 
   constructor(public _filesService: FilesService) {}
-
-
-
+  
   async openFile(url: string, name: string) {
-    await this._filesService.updateOpen({name})
     window.open(url)
     window.location.reload()
-  }
-
-  async authenticateFile(name: string, url: string){
-    url = encodeURIComponent(url)
-    console.log(url)
-
-    try{
-      await this._filesService.getAutentication(url, name)
-      await this._filesService.autenticateFile({name})
-      window.location.reload()
-    }
-    catch(error){
-      console.log(error)
-    }
   }
 }
